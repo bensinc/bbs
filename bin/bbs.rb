@@ -97,7 +97,7 @@ end
 
 def display_new_message(socket, message = nil)
 	socket.puts "\n\nNew message\n\n"
-	subject = "Re: #{message.subject.gsub('Re: ', '')}"
+	subject = "Re: #{message.subject.gsub('Re: ', '')}" if message
 	if message
 		socket.puts "Subject: #{subject}"
 	else
